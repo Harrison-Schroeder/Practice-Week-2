@@ -19,7 +19,7 @@
 -- | https://www.airbnb.com/rooms/25367014 | 16           |
 -- | https://www.airbnb.com/rooms/25682427 | 16           |
 
--- First tried sorting by price but it seems like there may be some funkiness between nightly rate and total rate
+-- First, I tried sorting by price but it seems like there may be some funkiness between nightly rate and total rate
 
 -- SELECT url, accommodates, price
 -- FROM listings
