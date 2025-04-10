@@ -15,4 +15,88 @@
 -- | Brighton Park          | 678      |
 -- | Burnside               | 10       |
 
+SELECT listings.neighborhood, COUNT(reviews.id)
+FROM reviews INNER JOIN listings ON listings.id = reviews.listing_id
+GROUP BY neighborhood
+ORDER BY neighborhood ASC;
+
+-- Output
+-- neighborhood            COUNT(reviews.id)
+-- ----------------------  -----------------
+-- Albany Park             2557             
+-- Archer Heights          541              
+-- Armour Square           4165             
+-- Ashburn                 274              
+-- Auburn Gresham          20               
+-- Austin                  1475             
+-- Avalon Park             18               
+-- Avondale                6784             
+-- Belmont Cragin          633              
+-- Beverly                 382              
+-- Bridgeport              5559             
+-- Brighton Park           678              
+-- Burnside                10               
+-- Calumet Heights         722              
+-- Chatham                 342              
+-- Chicago Lawn            36               
+-- Clearing                4                
+-- Douglas                 2436             
+-- Dunning                 1155             
+-- East Garfield Park      6378             
+-- East Side               35               
+-- Edgewater               8617             
+-- Edison Park             262              
+-- Englewood               408              
+-- Forest Glen             297              
+-- Fuller Park             95               
+-- Gage Park               28               
+-- Garfield Ridge          333              
+-- Grand Boulevard         3208             
+-- Greater Grand Crossing  619              
+-- Hegewisch               131              
+-- Hermosa                 1293             
+-- Humboldt Park           4550             
+-- Hyde Park               4608             
+-- Irving Park             7256             
+-- Jefferson Park          2202             
+-- Kenwood                 2226             
+-- Lake View               30650            
+-- Lincoln Park            15196            
+-- Lincoln Square          5578             
+-- Logan Square            27211            
+-- Loop                    8258             
+-- Lower West Side         13003            
+-- Mckinley Park           1681             
+-- Montclare               100              
+-- Morgan Park             357              
+-- Mount Greenwood         95               
+-- Near North Side         22787            
+-- Near South Side         4810             
+-- Near West Side          13087            
+-- New City                322              
+-- North Center            7780             
+-- North Lawndale          1702             
+-- North Park              1179             
+-- Norwood Park            1936             
+-- Oakland                 946              
+-- Ohare                   237              
+-- Portage Park            3816             
+-- Pullman                 688              
+-- Rogers Park             5565             
+-- Roseland                192              
+-- South Chicago           262              
+-- South Deering           43               
+-- South Lawndale          1337             
+-- South Shore             1604             
+-- Uptown                  9735             
+-- Washington Heights      132              
+-- Washington Park         551              
+-- West Elsdon             33               
+-- West Englewood          28               
+-- West Garfield Park      852              
+-- West Lawn               828              
+-- West Pullman            251              
+-- West Ridge              3319             
+-- West Town               42741            
+-- Woodlawn                3521   
 

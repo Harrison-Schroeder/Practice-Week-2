@@ -12,4 +12,22 @@
 -- | Private room in townhouse           | 3        |
 -- +-------------------------------------+----------+
 
+SELECT property_type, COUNT(*)
+FROM listings
+WHERE neighborhood = "Hyde Park"
+GROUP BY property_type
+ORDER BY Count(*) DESC;
+
+-- Output
+-- property_type                        COUNT(*)
+-- -----------------------------------  --------
+-- Entire rental unit                   40      
+-- Private room in rental unit          15      
+-- Private room in residential home     12      
+-- Private room in condominium (condo)  7       
+-- Entire condominium (condo)           6       
+-- Entire residential home              4       
+-- Private room in townhouse            3       
+-- Entire townhouse                     1       
+-- Entire guest suite                   1    
 
