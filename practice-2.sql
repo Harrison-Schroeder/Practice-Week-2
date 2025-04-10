@@ -19,4 +19,115 @@
 -- | https://www.airbnb.com/rooms/25367014 | 16           |
 -- | https://www.airbnb.com/rooms/25682427 | 16           |
 
+-- First tried sorting by price but it seems like there may be some funkiness between nightly rate and total rate
+
+-- SELECT url, accommodates, price
+-- FROM listings
+-- WHERE accommodates >= 16
+-- ORDER BY price DESC;
+
+-- Removing that part, here is my solution
+
+SELECT url, accommodates
+FROM listings
+WHERE accommodates >= 16;
+
+-- Output
+-- url                                    accommodates
+-- -------------------------------------  ------------
+-- https://www.airbnb.com/rooms/1321332   16          
+-- https://www.airbnb.com/rooms/3172794   16          
+-- https://www.airbnb.com/rooms/12963261  16          
+-- https://www.airbnb.com/rooms/13478467  16          
+-- https://www.airbnb.com/rooms/13884932  16          
+-- https://www.airbnb.com/rooms/15287352  16          
+-- https://www.airbnb.com/rooms/16453692  16          
+-- https://www.airbnb.com/rooms/16662423  16          
+-- https://www.airbnb.com/rooms/19952780  16          
+-- https://www.airbnb.com/rooms/21321497  16          
+-- https://www.airbnb.com/rooms/21488226  16          
+-- https://www.airbnb.com/rooms/22352557  16          
+-- https://www.airbnb.com/rooms/23234733  16          
+-- https://www.airbnb.com/rooms/25232674  16          
+-- https://www.airbnb.com/rooms/25238570  16          
+-- https://www.airbnb.com/rooms/25367014  16          
+-- https://www.airbnb.com/rooms/25682427  16          
+-- https://www.airbnb.com/rooms/27226695  16          
+-- https://www.airbnb.com/rooms/28303715  16          
+-- https://www.airbnb.com/rooms/28459886  16          
+-- https://www.airbnb.com/rooms/29704960  16          
+-- https://www.airbnb.com/rooms/29707921  16          
+-- https://www.airbnb.com/rooms/30820481  16          
+-- https://www.airbnb.com/rooms/32790472  16          
+-- https://www.airbnb.com/rooms/32871572  16          
+-- https://www.airbnb.com/rooms/33186836  16          
+-- https://www.airbnb.com/rooms/33363106  16          
+-- https://www.airbnb.com/rooms/33376719  16          
+-- https://www.airbnb.com/rooms/33527045  16          
+-- https://www.airbnb.com/rooms/34545426  16          
+-- https://www.airbnb.com/rooms/34913380  16          
+-- https://www.airbnb.com/rooms/34944912  16          
+-- https://www.airbnb.com/rooms/35060034  16          
+-- https://www.airbnb.com/rooms/35183040  16          
+-- https://www.airbnb.com/rooms/35212437  16          
+-- https://www.airbnb.com/rooms/35351226  16          
+-- https://www.airbnb.com/rooms/35731377  16          
+-- https://www.airbnb.com/rooms/36075729  16          
+-- https://www.airbnb.com/rooms/36200479  16          
+-- https://www.airbnb.com/rooms/36912962  16          
+-- https://www.airbnb.com/rooms/37458664  16          
+-- https://www.airbnb.com/rooms/37799036  16          
+-- https://www.airbnb.com/rooms/38229310  16          
+-- https://www.airbnb.com/rooms/38453885  16          
+-- https://www.airbnb.com/rooms/38454628  16          
+-- https://www.airbnb.com/rooms/39255883  16          
+-- https://www.airbnb.com/rooms/39704752  16          
+-- https://www.airbnb.com/rooms/40137749  16          
+-- https://www.airbnb.com/rooms/40176049  16          
+-- https://www.airbnb.com/rooms/40560870  16          
+-- https://www.airbnb.com/rooms/40780053  16          
+-- https://www.airbnb.com/rooms/41348441  16          
+-- https://www.airbnb.com/rooms/41661233  16          
+-- https://www.airbnb.com/rooms/41692914  16          
+-- https://www.airbnb.com/rooms/41747373  16          
+-- https://www.airbnb.com/rooms/42175143  16          
+-- https://www.airbnb.com/rooms/42513801  16          
+-- https://www.airbnb.com/rooms/42573566  16          
+-- https://www.airbnb.com/rooms/43534178  16          
+-- https://www.airbnb.com/rooms/44090162  16          
+-- https://www.airbnb.com/rooms/44115433  16          
+-- https://www.airbnb.com/rooms/44116982  16          
+-- https://www.airbnb.com/rooms/44132383  16          
+-- https://www.airbnb.com/rooms/44134769  16          
+-- https://www.airbnb.com/rooms/44136045  16          
+-- https://www.airbnb.com/rooms/44162119  16          
+-- https://www.airbnb.com/rooms/44206728  16          
+-- https://www.airbnb.com/rooms/44252444  16          
+-- https://www.airbnb.com/rooms/45177129  16          
+-- https://www.airbnb.com/rooms/45529591  16          
+-- https://www.airbnb.com/rooms/45777995  16          
+-- https://www.airbnb.com/rooms/45830682  16          
+-- https://www.airbnb.com/rooms/46026541  16          
+-- https://www.airbnb.com/rooms/46053960  16          
+-- https://www.airbnb.com/rooms/47369739  16          
+-- https://www.airbnb.com/rooms/47856464  16          
+-- https://www.airbnb.com/rooms/47859074  16          
+-- https://www.airbnb.com/rooms/48000856  16          
+-- https://www.airbnb.com/rooms/48185535  16          
+-- https://www.airbnb.com/rooms/48402630  16          
+-- https://www.airbnb.com/rooms/48405612  16          
+-- https://www.airbnb.com/rooms/48568457  16          
+-- https://www.airbnb.com/rooms/48646689  16          
+-- https://www.airbnb.com/rooms/48770960  16          
+-- https://www.airbnb.com/rooms/48851587  16          
+-- https://www.airbnb.com/rooms/48935045  16          
+-- https://www.airbnb.com/rooms/48939896  16          
+-- https://www.airbnb.com/rooms/49293937  16          
+-- https://www.airbnb.com/rooms/49399182  16          
+-- https://www.airbnb.com/rooms/49921670  16          
+-- https://www.airbnb.com/rooms/50146852  16          
+-- https://www.airbnb.com/rooms/50269122  16          
+-- https://www.airbnb.com/rooms/50726344  16          
+-- https://www.airbnb.com/rooms/51288306  16          
+-- https://www.airbnb.com/rooms/52444360  16   
 
